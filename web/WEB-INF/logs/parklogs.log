@@ -1,0 +1,284 @@
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Tue Feb 12 01:14:51 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Feb 12 01:14:51 EET 2013 SELECT  * FROM service
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Feb 12 01:14:51 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-3 ua.epam.projects.project4.model.commands.LoginCommand - login12 logged at Tue Feb 12 01:14:51 EET 2013
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 12 01:14:51 EET 2013 SELECT park_id,park.name,park.description,park.forester_id FROM park WHERE park.owner_id=?
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 12 01:14:51 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,forester.forester_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN forester JOIN user_info JOIN plant ON order.owner_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND forester.forester_id=order.forester_id AND forester.user_info_id=user_info.user_info_id
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLOwner - Tue Feb 12 01:14:51 EET 2013 SELECT owner.owner_id,owner.organisation FROM owner WHERE owner.user_info_id=?
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Tue Feb 12 01:14:57 EET 2013 SELECT user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id FROM forester JOIN user_info ON forester.forester_id=? AND user_info.user_info_id=forester.user_info_id
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 12 01:14:57 EET 2013 SELECT plant.plant_id,plant.plant_info_id,plant.planted_date,plant.date_cuted FROM plant WHERE park_id=? AND plant.planted_date IS NOT NULL AND plant.park_id=park_id
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Tue Feb 12 01:15:19 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Tue Feb 12 01:15:49 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Feb 12 01:15:49 EET 2013 SELECT  * FROM service
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Feb 12 01:15:49 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-3 ua.epam.projects.project4.model.commands.LoginCommand - Lena logged at Tue Feb 12 01:15:49 EET 2013
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 12 01:15:49 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 12 01:15:49 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-3 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Tue Feb 12 01:15:49 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySqlDAOFactory - Tue Feb 12 15:44:35 EET 2013 Pool created
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Tue Feb 12 15:44:36 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Feb 12 15:44:36 EET 2013 SELECT  * FROM service
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Feb 12 15:44:36 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-2 ua.epam.projects.project4.model.commands.LoginCommand - login10 logged at Tue Feb 12 15:44:36 EET 2013
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 12 15:44:36 EET 2013 SELECT park_id,park.name,park.description,park.forester_id FROM park WHERE park.owner_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 12 15:44:36 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,forester.forester_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN forester JOIN user_info JOIN plant ON order.owner_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND forester.forester_id=order.forester_id AND forester.user_info_id=user_info.user_info_id
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOwner - Tue Feb 12 15:44:36 EET 2013 SELECT owner.owner_id,owner.organisation FROM owner WHERE owner.user_info_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Tue Feb 12 15:44:58 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySqlDAOFactory - Sun Feb 17 12:36:31 EET 2013 Pool created
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Sun Feb 17 12:36:33 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLService - Sun Feb 17 12:36:33 EET 2013 SELECT  * FROM service
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Sun Feb 17 12:36:33 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-2 ua.epam.projects.project4.model.commands.LoginCommand - Lena logged at Sun Feb 17 12:36:33 EET 2013
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Sun Feb 17 12:36:34 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Sun Feb 17 12:36:34 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Sun Feb 17 12:36:34 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLService - Sun Feb 17 12:54:48 EET 2013 SELECT  * FROM service
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Sun Feb 17 12:54:48 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Sun Feb 17 12:54:48 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Sun Feb 17 12:54:48 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Sun Feb 17 12:54:48 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLService - Sun Feb 17 12:57:57 EET 2013 SELECT  * FROM service
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Sun Feb 17 12:57:57 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Sun Feb 17 12:57:57 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Sun Feb 17 12:57:57 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Sun Feb 17 12:57:57 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLService - Sun Feb 17 12:58:25 EET 2013 SELECT  * FROM service
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Sun Feb 17 12:58:25 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Sun Feb 17 12:58:25 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Sun Feb 17 12:58:25 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Sun Feb 17 12:58:25 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySqlDAOFactory - Sun Feb 17 13:11:55 EET 2013 Pool created
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Sun Feb 17 13:11:56 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLService - Sun Feb 17 13:11:56 EET 2013 SELECT  * FROM service
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Sun Feb 17 13:11:56 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-1 ua.epam.projects.project4.model.commands.LoginCommand - Lena logged at Sun Feb 17 13:11:56 EET 2013
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Sun Feb 17 13:11:56 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Sun Feb 17 13:11:56 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Sun Feb 17 13:11:56 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Sun Feb 17 13:14:39 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLService - Sun Feb 17 13:14:39 EET 2013 SELECT  * FROM service
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Sun Feb 17 13:14:39 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-1 ua.epam.projects.project4.model.commands.LoginCommand - Lena logged at Sun Feb 17 13:14:39 EET 2013
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Sun Feb 17 13:14:39 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Sun Feb 17 13:14:39 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Sun Feb 17 13:14:39 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Sun Feb 17 13:14:51 EET 2013 UPDATE `order` SET order.execution_date = ?,order.confirmation_date = ? WHERE order.order_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOwner - Sun Feb 17 13:14:58 EET 2013 SELECT user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id FROM owner JOIN user_info ON owner.owner_id=? AND user_info.user_info_id=owner.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Sun Feb 17 13:14:58 EET 2013 SELECT plant.plant_id,plant.plant_info_id,plant.planted_date,plant.date_cuted FROM plant WHERE park_id=? AND plant.planted_date IS NOT NULL AND plant.park_id=park_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Sun Feb 17 13:16:24 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLService - Sun Feb 17 13:16:24 EET 2013 SELECT  * FROM service
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Sun Feb 17 13:16:24 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-1 ua.epam.projects.project4.model.commands.LoginCommand - login12 logged at Sun Feb 17 13:16:24 EET 2013
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Sun Feb 17 13:16:24 EET 2013 SELECT park_id,park.name,park.description,park.forester_id FROM park WHERE park.owner_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Sun Feb 17 13:16:24 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,forester.forester_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN forester JOIN user_info JOIN plant ON order.owner_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND forester.forester_id=order.forester_id AND forester.user_info_id=user_info.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOwner - Sun Feb 17 13:16:24 EET 2013 SELECT owner.owner_id,owner.organisation FROM owner WHERE owner.user_info_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Sun Feb 17 13:17:11 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLService - Sun Feb 17 13:17:11 EET 2013 SELECT  * FROM service
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Sun Feb 17 13:17:11 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-1 ua.epam.projects.project4.model.commands.LoginCommand - login9 logged at Sun Feb 17 13:17:11 EET 2013
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Sun Feb 17 13:17:11 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Sun Feb 17 13:17:11 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Sun Feb 17 13:17:11 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLService - Sun Feb 17 13:17:21 EET 2013 SELECT  * FROM service
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Sun Feb 17 13:17:21 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Sun Feb 17 13:17:21 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Sun Feb 17 13:17:21 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Sun Feb 17 13:17:21 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySqlDAOFactory - Tue Feb 26 12:39:48 EET 2013 Pool created
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Tue Feb 26 12:39:51 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Feb 26 12:39:51 EET 2013 SELECT  * FROM service
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Feb 26 12:39:51 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-2 ua.epam.projects.project4.model.commands.LoginCommand - login12 logged at Tue Feb 26 12:39:51 EET 2013
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 26 12:39:52 EET 2013 SELECT park_id,park.name,park.description,park.forester_id FROM park WHERE park.owner_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 26 12:39:52 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,forester.forester_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN forester JOIN user_info JOIN plant ON order.owner_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND forester.forester_id=order.forester_id AND forester.user_info_id=user_info.user_info_id
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOwner - Tue Feb 26 12:39:52 EET 2013 SELECT owner.owner_id,owner.organisation FROM owner WHERE owner.user_info_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Tue Feb 26 12:39:56 EET 2013 SELECT user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id FROM forester JOIN user_info ON forester.forester_id=? AND user_info.user_info_id=forester.user_info_id
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 26 12:39:56 EET 2013 SELECT plant.plant_id,plant.plant_info_id,plant.planted_date,plant.date_cuted FROM plant WHERE park_id=? AND plant.planted_date IS NOT NULL AND plant.park_id=park_id
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 26 12:40:14 EET 2013 INSERT INTO `order`(order.owner_id,order.forester_id,order.plant_id,order.service_id) VALUES(?,?,?,?)
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Tue Feb 26 12:40:38 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Feb 26 12:40:38 EET 2013 SELECT  * FROM service
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Feb 26 12:40:38 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-1 ua.epam.projects.project4.model.commands.LoginCommand - login9 logged at Tue Feb 26 12:40:38 EET 2013
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 26 12:40:38 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 26 12:40:38 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Tue Feb 26 12:40:38 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlant - Tue Feb 26 12:40:43 EET 2013 UPDATE plant SET plant.planted_date = ?,plant.date_cuted = ? WHERE plant.plant_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 26 12:40:43 EET 2013 UPDATE `order` SET order.execution_date = ?,order.confirmation_date = ? WHERE order.order_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Feb 26 12:40:49 EET 2013 SELECT  * FROM service
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Feb 26 12:40:49 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 26 12:40:49 EET 2013 SELECT park_id,park.name,park.description,park.forester_id FROM park WHERE park.owner_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 26 12:40:49 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,forester.forester_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN forester JOIN user_info JOIN plant ON order.owner_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND forester.forester_id=order.forester_id AND forester.user_info_id=user_info.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOwner - Tue Feb 26 12:40:49 EET 2013 SELECT owner.owner_id,owner.organisation FROM owner WHERE owner.user_info_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 26 12:40:57 EET 2013 UPDATE `order` SET order.execution_date = ?,order.confirmation_date = ? WHERE order.order_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Feb 26 12:41:17 EET 2013 SELECT  * FROM service
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Feb 26 12:41:17 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 26 12:41:17 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 26 12:41:17 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Tue Feb 26 12:41:17 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOwner - Tue Feb 26 12:41:29 EET 2013 SELECT user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id FROM owner JOIN user_info ON owner.owner_id=? AND user_info.user_info_id=owner.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 26 12:41:29 EET 2013 SELECT plant.plant_id,plant.plant_info_id,plant.planted_date,plant.date_cuted FROM plant WHERE park_id=? AND plant.planted_date IS NOT NULL AND plant.park_id=park_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Feb 26 12:41:33 EET 2013 SELECT  * FROM service
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Feb 26 12:41:33 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 26 12:41:33 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 26 12:41:33 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Tue Feb 26 12:41:33 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySqlDAOFactory - Tue Feb 26 13:01:07 EET 2013 Pool created
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Tue Feb 26 13:01:08 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Feb 26 13:01:08 EET 2013 SELECT  * FROM service
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Feb 26 13:01:08 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-2 ua.epam.projects.project4.model.commands.LoginCommand - login9 logged at Tue Feb 26 13:01:08 EET 2013
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 26 13:01:08 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 26 13:01:08 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Tue Feb 26 13:01:08 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 26 13:01:18 EET 2013 UPDATE `order` SET order.execution_date = ?,order.confirmation_date = ? WHERE order.order_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Feb 26 13:01:43 EET 2013 SELECT  * FROM service
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Feb 26 13:01:43 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 26 13:01:43 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 26 13:01:43 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Tue Feb 26 13:01:43 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Feb 26 13:02:09 EET 2013 SELECT  * FROM service
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Feb 26 13:02:09 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Feb 26 13:02:09 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Feb 26 13:02:09 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Tue Feb 26 13:02:09 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Feb 26 13:02:27 EET 2013 SELECT  * FROM service
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Feb 26 13:02:27 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Feb 26 13:02:31 EET 2013 SELECT  * FROM service
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Feb 26 13:02:31 EET 2013 SELECT  * FROM plant_info
+ERROR http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 1 219 789 078 milliseconds ago.  The last packet sent successfully to the server was 1 219 789 078 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3364)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1983)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2163)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2624)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2127)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2293)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+	at ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo.findUserInfo(MySQLUserInfo.java:87)
+	at ua.epam.projects.project4.model.commands.LoginCommand.perform(LoginCommand.java:38)
+	at ua.epam.projects.project4.controller.ParkServlet.processRequest(ParkServlet.java:41)
+	at ua.epam.projects.project4.controller.ParkServlet.doPost(ParkServlet.java:80)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:637)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:879)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:600)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1703)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3345)
+	... 25 more
+ERROR http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 1 219 824 507 milliseconds ago.  The last packet sent successfully to the server was 1 219 824 513 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3364)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1983)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2163)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2624)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2127)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2293)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+	at ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo.findUserInfo(MySQLUserInfo.java:87)
+	at ua.epam.projects.project4.model.commands.LoginCommand.perform(LoginCommand.java:38)
+	at ua.epam.projects.project4.controller.ParkServlet.processRequest(ParkServlet.java:41)
+	at ua.epam.projects.project4.controller.ParkServlet.doPost(ParkServlet.java:80)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:637)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:879)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:600)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1703)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3345)
+	... 25 more
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Tue Mar 12 15:53:14 EET 2013 SELECT user_info.user_info_id FROM user_info WHERE user_info.login=?
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Tue Mar 12 15:53:14 EET 2013 INSERT INTO user_info(user_info.role,user_info.login,user_info.password,user_info.first_name,user_info.surname,user_info.midle_name) VALUES(?,?,?,?,?,?)
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Mar 12 15:53:15 EET 2013 SELECT  * FROM service
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Mar 12 15:53:15 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-4 MySQLOwner - Tue Mar 12 15:53:15 EET 2013 INSERT INTO owner(owner.organisation,owner.user_info_id) VALUES(?,?)
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Tue Mar 12 15:53:29 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Mar 12 15:53:29 EET 2013 SELECT  * FROM service
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Mar 12 15:53:29 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-4 ua.epam.projects.project4.model.commands.LoginCommand - loginnew logged at Tue Mar 12 15:53:29 EET 2013
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Mar 12 15:53:29 EET 2013 SELECT park_id,park.name,park.description,park.forester_id FROM park WHERE park.owner_id=?
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Mar 12 15:53:29 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,forester.forester_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN forester JOIN user_info JOIN plant ON order.owner_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND forester.forester_id=order.forester_id AND forester.user_info_id=user_info.user_info_id
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLOwner - Tue Mar 12 15:53:29 EET 2013 SELECT owner.owner_id,owner.organisation FROM owner WHERE owner.user_info_id=?
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Tue Mar 12 15:53:40 EET 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLService - Tue Mar 12 15:53:40 EET 2013 SELECT  * FROM service
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Tue Mar 12 15:53:40 EET 2013 SELECT  * FROM plant_info
+INFO http-8082-4 ua.epam.projects.project4.model.commands.LoginCommand - login9 logged at Tue Mar 12 15:53:40 EET 2013
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Tue Mar 12 15:53:41 EET 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Tue Mar 12 15:53:41 EET 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-4 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Tue Mar 12 15:53:41 EET 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySqlDAOFactory - Sun Jun 02 22:41:34 EEST 2013 Pool created
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Sun Jun 02 22:41:37 EEST 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Sun Jun 02 22:41:49 EEST 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Sun Jun 02 22:41:59 EEST 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Sun Jun 02 22:42:08 EEST 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLService - Sun Jun 02 22:42:15 EEST 2013 SELECT  * FROM service
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Sun Jun 02 22:42:15 EEST 2013 SELECT  * FROM plant_info
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Sun Jun 02 22:42:26 EEST 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLService - Sun Jun 02 22:42:26 EEST 2013 SELECT  * FROM service
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Sun Jun 02 22:42:26 EEST 2013 SELECT  * FROM plant_info
+INFO http-8082-2 ua.epam.projects.project4.model.commands.LoginCommand - login11 logged at Sun Jun 02 22:42:26 EEST 2013
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Sun Jun 02 22:42:27 EEST 2013 SELECT park_id,park.name,park.description,park.forester_id FROM park WHERE park.owner_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Sun Jun 02 22:42:27 EEST 2013 SELECT order.order_id,order.execution_date,order.date_added,forester.forester_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN forester JOIN user_info JOIN plant ON order.owner_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND forester.forester_id=order.forester_id AND forester.user_info_id=user_info.user_info_id
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLOwner - Sun Jun 02 22:42:27 EEST 2013 SELECT owner.owner_id,owner.organisation FROM owner WHERE owner.user_info_id=?
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Sun Jun 02 22:42:34 EEST 2013 SELECT user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id FROM forester JOIN user_info ON forester.forester_id=? AND user_info.user_info_id=forester.user_info_id
+INFO http-8082-2 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Sun Jun 02 22:42:34 EEST 2013 SELECT plant.plant_id,plant.plant_info_id,plant.planted_date,plant.date_cuted FROM plant WHERE park_id=? AND plant.planted_date IS NOT NULL AND plant.park_id=park_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySqlDAOFactory - Fri Jun 14 12:34:14 EEST 2013 Pool created
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Fri Jun 14 12:34:16 EEST 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLService - Fri Jun 14 12:34:16 EEST 2013 SELECT  * FROM service
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Fri Jun 14 12:34:16 EEST 2013 SELECT  * FROM plant_info
+INFO http-8082-1 ua.epam.projects.project4.model.commands.LoginCommand - jpa logged at Fri Jun 14 12:34:16 EEST 2013
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Fri Jun 14 12:34:16 EEST 2013 SELECT park_id,park.name,park.description,park.owner_id FROM park WHERE park.forester_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Fri Jun 14 12:34:16 EEST 2013 SELECT order.order_id,order.execution_date,order.date_added,owner.owner_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN owner JOIN user_info JOIN plant ON order.forester_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND owner.owner_id=order.owner_id AND owner.user_info_id=user_info.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Fri Jun 14 12:34:16 EEST 2013 SELECT forester.forester_id,qualification FROM forester WHERE forester.user_info_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySqlDAOFactory - Fri Aug 09 12:24:06 EEST 2013 Pool created
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLUserInfo - Fri Aug 09 12:24:12 EEST 2013 SELECT user_info.user_info_id,user_info.role,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name FROM user_info WHERE user_info.login=? AND user_info.password=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLService - Fri Aug 09 12:24:12 EEST 2013 SELECT  * FROM service
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPlantInfo - Fri Aug 09 12:24:13 EEST 2013 SELECT  * FROM plant_info
+INFO http-8082-1 ua.epam.projects.project4.model.commands.LoginCommand - login12 logged at Fri Aug 09 12:24:13 EEST 2013
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Fri Aug 09 12:24:13 EEST 2013 SELECT park_id,park.name,park.description,park.forester_id FROM park WHERE park.owner_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOrder - Fri Aug 09 12:24:14 EEST 2013 SELECT order.order_id,order.execution_date,order.date_added,forester.forester_id,user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id,plant.plant_id,plant.plant_info_id,plant.park_id,plant.planted_date,plant.date_cuted,order.service_id FROM `order` JOIN forester JOIN user_info JOIN plant ON order.owner_id=? AND order.confirmation_date IS NULL AND plant.plant_id=order.plant_id AND forester.forester_id=order.forester_id AND forester.user_info_id=user_info.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLOwner - Fri Aug 09 12:24:14 EEST 2013 SELECT owner.owner_id,owner.organisation FROM owner WHERE owner.user_info_id=?
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLForester - Fri Aug 09 12:24:22 EEST 2013 SELECT user_info.user_info_id,user_info.login,user_info.first_name,user_info.surname,user_info.midle_name,user_info.user_info_id FROM forester JOIN user_info ON forester.forester_id=? AND user_info.user_info_id=forester.user_info_id
+INFO http-8082-1 ua.epam.projects.project4.model.dao.mysql.MySQLPark - Fri Aug 09 12:24:22 EEST 2013 SELECT plant.plant_id,plant.plant_info_id,plant.planted_date,plant.date_cuted FROM plant WHERE park_id=? AND plant.planted_date IS NOT NULL AND plant.park_id=park_id
