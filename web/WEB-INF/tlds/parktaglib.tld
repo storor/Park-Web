@@ -5,7 +5,7 @@
   <uri>/WEB-INF/tlds/parktaglib</uri>
   <tag>
     <name>getLocaleValueTag</name>
-    <tag-class>ua.epam.projects.project4.view.GetLocaleValueTag</tag-class>
+    <tag-class>ua.tolok.projects.project4.view.GetLocaleValueTag</tag-class>
     <body-content>empty</body-content>
     <attribute>
       <name>locale</name>
@@ -14,25 +14,25 @@
     </attribute>
     <attribute>
       <name>serviceName</name>
-      <type>ua.epam.projects.project4.model.entities.Service</type>
+      <type>ua.tolok.projects.project4.model.entities.Service</type>
       <required>false</required>
       <rtexprvalue>true</rtexprvalue>
     </attribute>
     <attribute>
       <name>serviceDescription</name>
-      <type>ua.epam.projects.project4.model.entities.Service</type>
+      <type>ua.tolok.projects.project4.model.entities.Service</type>
       <required>false</required>
       <rtexprvalue>true</rtexprvalue>
     </attribute>
     <attribute>
       <name>plantType</name>
-      <type>ua.epam.projects.project4.model.entities.PlantInfo</type>
+      <type>ua.tolok.projects.project4.model.entities.PlantInfo</type>
       <required>false</required>
       <rtexprvalue>true</rtexprvalue>
     </attribute>
     <attribute>
       <name>plantSort</name>
-      <type>ua.epam.projects.project4.model.entities.PlantInfo</type>
+      <type>ua.tolok.projects.project4.model.entities.PlantInfo</type>
       <required>false</required>
       <rtexprvalue>true</rtexprvalue>
     </attribute>

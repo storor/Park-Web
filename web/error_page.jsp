@@ -15,7 +15,7 @@
     </head>
     <body> 
         <fmt:setLocale value="${locale}"></fmt:setLocale>
-        <fmt:setBundle basename="ua.epam.projects.project4.properties.language_resourse"></fmt:setBundle>
+        <fmt:setBundle basename="ua.tolok.projects.project4.properties.language_resourse"></fmt:setBundle>
         <FORM action="servlet" method="POST">  
             <table id="main_table">
                 <thead>

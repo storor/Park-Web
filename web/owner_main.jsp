@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="style/park_style.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <fmt:setLocale value="${locale}" scope="request"></fmt:setLocale>
-        <fmt:setBundle basename="ua.epam.projects.project4.properties.language_resourse"></fmt:setBundle>
+        <fmt:setBundle basename="ua.tolok.projects.project4.properties.language_resourse"></fmt:setBundle>
         <title> <fmt:message key="owner_main"></fmt:message></title>
         </head>
         <body>

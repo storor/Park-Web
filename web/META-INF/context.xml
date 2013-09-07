@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context antiJARLocking="true" path="/Project4">
-    <Resource name="jdbc/parkdb" auth="Container"
-    type="javax.sql.DataSource" maxActive="100" 
-    maxIdle="30" maxWait="10000"
-    username="root" 
-    password="pass"
-    driverClassName="com.mysql.jdbc.Driver"
-    url="jdbc:mysql://localhost:3306/parkdb"/>
-     <context-param>
-        <param-name>javax.servlet.jsp.jstl.fmt.request.charset</param-name>
-        <param-value>UTF-8</param-value>
-    </context-param>
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/parkdb" password="pass" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/parkdb" username="root"/>
+  <context-param>
+    <param-name>javax.servlet.jsp.jstl.fmt.request.charset</param-name>
+    <param-value>UTF-8</param-value>
+  </context-param>
 </Context>
